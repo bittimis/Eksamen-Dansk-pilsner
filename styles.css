@@ -1,0 +1,719 @@
+body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-variant: all-small-caps;
+  color: white;
+}
+p {
+  font-family: "Roboto Slab", serif;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+}
+hr {
+  width: 100px;
+  margin: auto;
+  border-color: #506057;
+  height: 2px;
+}
+.bølge {
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 35pt;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 22pt;
+  }
+}
+
+.box-nav {
+  border: 2px solid #ede3bd;
+  border-radius: 5px 6px;
+  box-sizing: border-box;
+  margin-top: 50px;
+
+  margin-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+/*COMPUTER INSTILLINGER*/
+@media screen and (min-width: 768px) {
+  .top-nav {
+    display: none;
+  }
+  /*HEADER*/
+  header {
+    position: fixed;
+
+    top: 0;
+    background-color: #647860;
+    box-shadow: 0px 0px 21px -5px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: 6;
+    overflow: hidden;
+    border-bottom: 4px solid #f1e19d;
+  }
+  header > nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 120px;
+    border: 2px solid #cedce500;
+  }
+
+  header > nav > a.box-nav:hover {
+    background-color: #ede3bd;
+    transition: 1s;
+    border: 2px solid #ede3bd;
+    color: black;
+  }
+
+  #logo-computer {
+    height: 110px;
+  }
+  /*HEADER END*/
+  /*CAROUSEL COMPUTER START*/
+
+  .carousel-wrapper {
+    position: relative;
+    height: 800px;
+  }
+  .carousel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  /*HERO SLIDER COMPUTER END*/
+}
+/*MOBIL INSTILLINGER*/
+@media screen and (max-width: 768px) {
+  /*BURGER START*/
+  #logo-burger {
+    height: 40px;
+    padding: 10px;
+  }
+  #computer-header {
+    display: none;
+  }
+  .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #647860;
+    background: linear-gradient(to left, #506057, #506057);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+    border-bottom: 4px solid #f1e19d;
+    box-shadow: 0px 0px 21px -5px rgba(0, 0, 0, 0.7);
+
+    color: #fff;
+    height: 50px;
+    padding: 1em;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: #ede3bd;
+    background-color: #506057;
+  }
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu > li > a {
+    text-decoration: none;
+    color: #ede3bd;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #ede3bd;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(231, 88, 88, 0);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    box-shadow: 0px 0px 21px -5px rgba(0, 0, 0, 0.7);
+    border-bottom: 4px solid #ede3bd;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #e8dfa1;
+  }
+  /*BURGER END*/
+  /*carousel MOBIL START*/
+  .carousel-wrapper {
+    position: relative;
+    height: 400px;
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+  .carousel-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  /*carousel SLIDER MOBIL END*/
+}
+/****************************************************************/
+
+/*CAROUSEL OVERORDNEDE INSTILLINGER START*/
+
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.carousel-wrapper .carousel-item .arrow {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+
+  background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-light.png")
+    50% 50%/20px no-repeat;
+}
+.carousel-wrapper .carousel-item .arrow.arrow-prev {
+  left: 0;
+}
+.carousel-wrapper .carousel-item .arrow.arrow-next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.carousel-wrapper[id^="target-item"] {
+  display: none;
+}
+.carousel-wrapper .item-1 {
+  z-index: 2;
+  opacity: 1;
+}
+.carousel-wrapper *:target ~ .item-1 {
+  opacity: 0;
+}
+.carousel-wrapper #target-item-1:target ~ .item-1 {
+  opacity: 1;
+}
+.carousel-wrapper #target-item-2:target ~ .item-2,
+.carousel-wrapper #target-item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+.item-1 {
+  background-image: url(images/craftbeer.jpg);
+}
+.item-2 {
+  background-image: url(images/vs.jpg);
+}
+.item-3 {
+  background-image: url(images/skål.png);
+}
+/*CAROUSEL OVERORDNEDE INSTILLINGER END*/
+
+/*****************************************************************/
+
+/*section flaske øl computer*/
+@media screen and (min-width: 768px) {
+  .section-flaskeøl {
+    height: 600px;
+    justify-content: space-between;
+  }
+  #flaskeøl-tekst {
+    padding: 220px;
+  }
+  #flaskeøl {
+    padding-right: 350px;
+  }
+}
+/*section flakse øl mobil*/
+@media screen and (max-width: 768px) {
+  .section-flaskeøl {
+    height: 1000px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px;
+  }
+  #flaskeøl-tekst {
+    padding-bottom: 50px;
+  }
+}
+
+.section-flaskeøl {
+  background-color: #ede3bd;
+  margin-top: 0;
+  display: flex;
+}
+.section-flaskeøl > div {
+  align-items: center;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-flaskeøl > div > h1,
+p {
+  text-align: center;
+  color: black;
+}
+
+.section-flaskeøl > div > p > a {
+  border: 2px solid #506057;
+}
+.section-flaskeøl > div > p > a:hover {
+  background-color: #647860;
+  transition: 1s;
+  border: 2px solid #647860;
+  color: #ede3bd;
+}
+/*******************************************************************/
+
+/*****************brygning og ingridienser***************************/
+/*https://us.niemvuilaptrinh.com/article/44-image-hover-effects-css-for-website*/
+@media screen and (max-width: 768px) {
+  .section-brygning {
+    flex-direction: column;
+    height: 1000px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .overskrift {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-brygning {
+    height: 600px;
+  }
+  .overskrift {
+    padding-bottom: 40px;
+    padding-top: 50px;
+  }
+  .overskrift > h2 {
+    color: #ede3bd;
+  }
+}
+
+.overskrift {
+  background-color: #647860;
+
+  text-align: center;
+  color: white;
+}
+
+.section-brygning {
+  background-color: #647860;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+/*FIGURE SNIP START*/
+@media screen and (max-width: 768px) {
+  figure.snip0019 {
+    width: 350px;
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+figure.snip0019 {
+  font-family: "Raleway", Arial, sans-serif;
+  color: #ede3bd;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+
+  min-width: 220px;
+  max-width: 610px;
+  max-height: 420px;
+  background: #000000;
+  text-align: center;
+}
+figure.snip0019 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0019 img {
+  opacity: 1;
+
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  height: 500px;
+  width: 670px;
+}
+figure.snip0019 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+figure.snip0019 figcaption > div {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+figure.snip0019 figcaption::before {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  width: 2px;
+  content: "";
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0019 h2,
+figure.snip0019 p {
+  margin: 0;
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s, -webkit-transform 0.45s, -moz-transform 0.45s,
+    -o-transform 0.45s, transform 0.45s;
+}
+figure.snip0019 h2 {
+  text-align: right;
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(50%, 0%, 0);
+  transform: translate3d(50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0019 h2 span {
+  font-weight: 800;
+}
+figure.snip0019 p {
+  display: block;
+  bottom: 0;
+  text-align: left;
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #ede3bd;
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0019 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0019:hover img {
+  opacity: 0.7;
+}
+figure.snip0019:hover figcaption h2,
+figure.snip0019:hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0019:hover figcaption h2 {
+  opacity: 1;
+}
+figure.snip0019:hover figcaption p {
+  opacity: 1;
+}
+figure.snip0019:hover figcaption::before {
+  background: #ffffff;
+  top: 0px;
+  bottom: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/*FIGURE SNIP SLUT************************************************************s*/
+
+/**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/
+
+/*ARTICLE STYLES*/
+.ing {
+  background-color: #f1e4b7;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+  background-color: #f1e4b7;
+}
+
+main > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > article > section {
+  width: 90%;
+  background-color: white;
+  position: relative;
+  bottom: 80px;
+  text-align: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+main > article > section > p {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/*COMPUTER main article*/
+@media screen and (min-width: 786px) {
+  main > article > img {
+    width: 1000px;
+  }
+}
+/*MOBIL main articel*/
+@media screen and (max-width: 786px) {
+  main > article > img {
+    width: 100%;
+  }
+}
+/**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/
+
+/*SMAGSTEST*/
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+div.smagstest {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.tillykke {
+  align-items: center;
+  text-align: center;
+}
+
+/*----------------------FOOTER START---------------*/
+
+/*mobil*/
+@media screen and (max-width: 768px) {
+  footer {
+    background-color: #ede3bd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+}
+
+/*computer*/
+
+@media screen and (min-width: 768px) {
+  footer {
+    /*background-image: url(images/mandmedøl.png);*/
+    background-color: #ede3bd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+
+    margin-bottom: 0;
+  }
+}
+
+footer > div {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+footer > div > h2 {
+  color: black;
+}
+
+footer > div > p {
+  color: black;
+}
+
+footer > div > h2 {
+  font-size: 25pt;
+}
+footer > div > p {
+  font-size: 15pt;
+}
+
+#footerlogo {
+  height: 200px;
+}
+
+/*FOOTER END*/

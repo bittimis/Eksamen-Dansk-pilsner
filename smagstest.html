@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DANSK PILSNER</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--COMPUTER HEADER START-->
+    <header id="computer-header">
+      <nav>
+        <a class="box-nav" href="http://127.0.0.1:5500/danskpilsner.html"
+          >Dansk Pilsner</a
+        >
+        <a href="http://127.0.0.1:5500/index.html"
+          ><img
+            id="logo-computer"
+            src="images/nytlogo2.png"
+            alt="logo computer"
+        /></a>
+        <a class="box-nav" href="http://127.0.0.1:5500/smagstest.html"
+          >Smagstest</a
+        >
+      </nav>
+    </header>
+    <!--COMPUTER HEADER SLUT-->
+
+    <!--BURGER START-->
+
+    <section class="top-nav">
+      <div>
+        <a href="http://127.0.0.1:5500/index.html"
+          ><img
+            id="logo-burger"
+            src="images/burgerlogo.png"
+            alt="logo burger"
+          />
+        </a>
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li>
+          <a href="http://127.0.0.1:5500/danskpilsner.html">Dansk Pilsner</a>
+        </li>
+        <li><a href="http://127.0.0.1:5500/smagstest.html">Smagstest</a></li>
+      </ul>
+    </section>
+
+    <!--BURGER SLUT-->
+    <!--https://www.w3schools.com/css/tryit.asp?filename=trycss_forms-->
+
+    <section style="height: 120px; background-color: #f2f2f2"></section>
+
+    <div class="smagstest">
+      <form action=" http://127.0.0.1:5500/tillykke.html">
+        <label for="fname">Dit fornavn</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Dit fornavn.."
+        />
+
+        <label for="lname">Dit efternavn</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Dit efternavn.."
+        />
+
+        <label id="spørgsmål1" for="arbejde"
+          >Hvad er det første du gør når du kommer hjem fra arbejde?</label
+        >
+        <select name="spørgsmål">
+          <option value="">Vælg...</option>
+          <option value="a">
+            Åbner køleskabet, tager en øl. Den første tår er den bedste.
+          </option>
+          <option value="b">
+            Går i gang med at lave mad, har tænkt på mad hele dagen.
+          </option>
+          <option value="c">Lægger mig til at sove</option>
+        </select>
+
+        <label id="spørgsmål2" for="elsker"
+          >Afslut denne sætning: "Jeg elsker når..."</label
+        >
+        <select name="spørgsmål">
+          <option value="">Vælg..</option>
+          <option value="australia">....der er fest og farver</option>
+          <option value="canada">
+            ...jeg er i naturen og der er ro og fred
+          </option>
+          <option value="usa">..der er fri bar</option>
+        </select>
+
+        <label id="spørgsmål3" for="pilsner">Normalt drikker jeg...</label>
+        <select name="spørgsmål">
+          <option value="">Vælg..</option>
+          <option value="a">Tuborg Pilsner</option>
+          <option value="b">Carlsberg Pilsner</option>
+          <option value="c">Royal Pilsner</option>
+        </select>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <!--FOOTER START -->
+    <footer>
+      <div>
+        <h2>DANSK PILSNER</h2>
+        <br />
+        <p>Bryggeri: Bryggeriet Vestfyen</p>
+        <br />
+        <p>Type: Pilsner</p>
+        <br />
+        <p>Alkohol: 4.6% Flaskestørrelse: 33 cl.</p>
+        <br />
+      </div>
+
+      <div>
+        <h2>Indkøbsteder</h2>
+        <br />
+        <p>Fakta</p>
+        <br />
+        <p>Super Brugsen</p>
+      </div>
+
+      <div>
+        <h2>Find os på</h2>
+        <br />
+
+        <p>Facebook</p>
+        <br />
+        <p>Instagram</p>
+        <br />
+
+        <br />
+      </div>
+    </footer>
+  </body>
+</html>
